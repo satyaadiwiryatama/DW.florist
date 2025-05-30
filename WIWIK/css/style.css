@@ -1,0 +1,729 @@
+:root {
+  --pink: #faa4bd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: #333;
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: var(--pink);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: var(--pink);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+  justify-content: end;
+}
+
+header .navbar a:hover {
+  color: var(--pink);
+}
+
+header .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* gunakan gap daripada margin di <a> */
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  justify-content: end;
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: var(--pink);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(../image/logo.png) right no-repeat,
+    url(../image/background2.jpg) no-repeat;
+  background-size: 700px, cover;
+  background-position: calc(100% - 50px), center;
+}
+
+.home .content {
+  max-width: 70rem;
+  margin-right: auto;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  color: #333;
+}
+
+.home .content span {
+  display: inline-block;
+  font-size: 3.5rem;
+  color: var(--pink);
+  line-height: 1.5;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: #999;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+/* Container utama */
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+/* Setiap item ikon */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  flex: 1 1 300px; /* fleksibel, minimal lebar 300px */
+  max-width: 400px;
+}
+
+/* Gambar ikon */
+.icons img {
+  width: 40px;
+  height: auto;
+}
+
+/* Teks informasi */
+.icons .info h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.icons .info span {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.products {
+  padding: 2rem 9%;
+  background: #fff;
+  text-align: center;
+}
+
+.products .heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.products .heading span {
+  color: #f57caa; /* Sesuai pink-nya */
+}
+
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.products .box-container .box {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  flex: 1 1 30rem;
+  min-height: 500px;
+}
+
+.products .box-container .box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.products .box-container .box h3 {
+  font-size: 2rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+}
+
+.products .box-container .box .price {
+  font-size: 1.7rem;
+  color: #f57caa;
+  margin-bottom: 1rem;
+}
+
+.products .box-container .box .price span {
+  font-size: 1.4rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 1rem;
+}
+
+.products .box-container .box .icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.products .box-container .box .icons a {
+  font-size: 1.8rem;
+  color: #555;
+  transition: 0.3s;
+}
+
+.products .box-container .box .icons a:hover {
+  color: var(--pink);
+}
+
+.products .box-container .box .cart-btn {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+}
+
+.products .box-container .box .cart-btn:hover {
+  background: var(--pink);
+}
+
+.products .box-container .box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* atau contain */
+  border-radius: 0.5rem;
+}
+
+.products .box {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.products .box .img {
+  height: 320px; /* Tinggi gambar diperbesar */
+  overflow: hidden;
+}
+
+.products .box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pastikan gambar tidak terpotong aneh */
+  transition: transform 0.3s;
+}
+
+.products .box .img img:hover {
+  transform: scale(1.05);
+}
+
+.products .cart-btn {
+  margin: 1rem auto 0.3rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.products .cart-btn:hover {
+  background-color: var(--pink);
+}
+
+.products .box .content h3 {
+  font-size: 3rem; /* atau sesuaikan misal 2rem */
+  font-weight: bold;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  font-family: "Merriweather", Merriweather; /* ganti font sesuai keinginan */
+}
+
+.products .box .img {
+  height: 320px;
+  overflow: hidden;
+  position: relative; /* Penting untuk posisi absolute anak-anaknya */
+}
+
+.products .box .img a.fas.fa-heart,
+.products .box .img a.fas.fa-share {
+  position: absolute;
+  top: 10px;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.products .box .img a.fas.fa-heart {
+  left: 10px;
+}
+
+.products .box .img a.fas.fa-share {
+  right: 10px;
+}
+
+.products .box .img a.fas:hover {
+  background-color: var(--pink);
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 9%;
+  background-color: #fff;
+}
+
+.contact .heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact .heading span {
+  color: #ff69b4; /* warna pink seperti pada teks "contact" */
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .row form .box,
+.contact .row form textarea {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  resize: none;
+}
+
+.contact .row form .btn {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  transition: background 0.3s ease;
+}
+
+.contact .row form .btn:hover {
+  background: #ff69b4;
+}
+
+.contact .row .image {
+  flex: 1 1 35rem;
+  text-align: center;
+}
+
+.contact .row .image img {
+  width: 100%;
+  max-width: 350px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Footer Section */
+.footer {
+  background: #f9f9f9;
+  padding: 40px 9%;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer .box {
+  flex: 1 1 22rem;
+}
+
+.footer .box h3 {
+  font-size: 2rem;
+  color: #333;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: #777;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .box a:hover {
+  color: #ff69b4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer .box p {
+  font-size: 1.5rem;
+  color: #555;
+  padding: 0.3rem 0;
+}
+
+.footer .box img {
+  margin-top: 1rem;
+  max-width: 200px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer .box-container {
+    flex-direction: column;
+  }
+
+  .footer .box {
+    width: 100%;
+  }
+}
+
+/* Optional: animasi gambar */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 5%;
+  }
+
+  .contact .heading {
+    font-size: 2.5rem;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row form,
+  .contact .row .image {
+    flex: 1 1 100%;
+  }
+
+  .contact .row .image img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .heading {
+    font-size: 2rem;
+  }
+
+  .contact .row form .box,
+  .contact .row form textarea {
+    font-size: 1.4rem;
+  }
+
+  .contact .row form .btn {
+    font-size: 1.4rem;
+  }
+}
+
+/* media queries */
+@media (max-width: 991ptx) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .home {
+    background-position: left;
+  }
+}
+@media (max-width: 768ptx) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .home .content h3 {
+    font-size: 5rem;
+  }
+
+  .home .content span {
+    font-size: 2.5rem;
+  }
+}
+
+.footer .social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer .social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .social a:hover {
+  color: #ff69b4;
+}
+
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 5%;
+  }
+
+  .footer .box-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer .social a {
+    font-size: 1.4rem;
+  }
+
+  .footer .social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 450ptx) {
+  html {
+    font-size: 50%;
+    /* Responsif untuk layar kecil */
+  }
+
+  @media (max-width: 600px) {
+    .icons {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .icons img {
+      width: 35px;
+    }
+
+    .icons .info h3 {
+      font-size: 1.3rem;
+    }
+
+    .icons .info span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    padding: 2rem 4%;
+  }
+
+  .products .heading {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .products .box-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .products .box-container .box {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .products .box {
+    width: 100%;
+  }
+
+  .products .box .content h3 {
+    font-size: 1.8rem;
+  }
+
+  .products .box .img {
+    height: 200px;
+  }
+
+  .products .cart-btn {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .products .box .img a.fas.fa-heart,
+  .products .box .img a.fas.fa-share {
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    top: 8px;
+  }
+
+  .products .box .img a.fas.fa-heart {
+    left: 8px;
+  }
+
+  .products .box .img a.fas.fa-share {
+    right: 8px;
+  }
+}
